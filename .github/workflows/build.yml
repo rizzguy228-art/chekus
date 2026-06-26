@@ -14,11 +14,23 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Download Forge MDK
+        run: |
+          wget https://maven.minecraftforge.net/net/minecraftforge/forge/1.20.1-47.3.0/forge-1.20.1-47.3.0-mdk.zip -O forge-mdk.zip
+          unzip forge-mdk.zip -d forge-mdk
+          cp -r src forge-mdk/
+          cp build.gradle forge-mdk/
+          cp settings.gradle forge-mdk/
+          cp gradle.properties forge-mdk/
+
       - name: Build
-        run: ./gradlew build
+        working-directory: forge-mdk
+        run: |
+          chmod +x gradlew
+          ./gradlew build
 
       - name: Upload JAR
         uses: actions/upload-artifact@v4
         with:
           name: chekushka-mod
-          path: build/libs/*.jar
+          path: forge-mdk/build/libs/*.jar
