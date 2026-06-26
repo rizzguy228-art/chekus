@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+license="MIT"
+
+[[dependencies.chekushka]]
+    modId="forge"
+    mandatory=true
+    versionRange="[47,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.chekushka]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1,1.21)"
+    ordering="NONE"
+    side="BOTH"
+
+[[mods]]
+    modId="chekushka"
+    version="1.0.0"
+    displayName="Chekushka Mod"
+    description='''
+Добавляет Чекушку Заветную №1.
+Даёт Силу III, Скорость IV и Слепоту I на 1 минуту.
+Восстанавливает 4 полоски голода.
+'''

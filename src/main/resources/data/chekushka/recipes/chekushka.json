@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " G ",
+    " W ",
+    " G "
+  ],
+  "key": {
+    "G": { "item": "minecraft:glass_bottle" },
+    "W": { "item": "minecraft:wheat" }
+  },
+  "result": {
+    "item": "chekushka:chekushka",
+    "count": 1
+  }
+}
